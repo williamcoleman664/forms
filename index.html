@@ -6,13 +6,58 @@
   <body>
     <form action="https://www.google.com"
     method="post">
+
+<!-- These are examples of inputs for forms, the name atribute helps coders down the line.     -->
     <input type="text" name="username">
     <input type="date" name="birthday">
     <input type="time" name="game-time">
     <input type="url" name="webite">
-    <input type="email" name="email-address">
+    <input type="email" name="email-address" required>
     <input type="number" name= "cost">
     <input type="tel" name="phone-number">
+    <textarea name="comment">
+      Add your comment here.
+    </textarea>
+    <!-- interchanabel button, cannot select more than one -->
+    <input type="radio" name="day" value="Friday">Friday
+    <input type="radio" name="day" value="Saturday">Saturday
+    <input type="radio" name="day" value="Sunday">Sunday
+    <!-- making checkboxes -->
+    <input type="checkbox" name="day" value="Friday">Friday
+    <input type="checkbox" name="day" value="Saturday">Saturday
+    <input type="checkbox" name="day" value="Sunday">Sunday
+<!-- diffrent way to do checkboxes, for like country selection -->
+    <select name="day">
+      <option value="Friday">Friday</option>
+      <option value="Saturday" checked>Saturday</option>
+      <option value="Sunday">Sunday</option>
+      <!-- Value is what gets posted to the form, but posting the text outside is what makes it show up. -->
+    </select>
+    <input type="submit" name="submit" value="Send">
+
+    <button type="submit" name="submit">
+      <strong>Send us</strong> a message!
+    </button>
+    <label for="username">Username</label>
+
+    <input type="text" name="username" id="username">
+    <fieldset>
+      <legend>Login</legend>
+      <!-- title for fieldset -->
+      <label>username
+        <input type="text" name="username" placeholder="Enter your full astate email address">
+      </label>
+
+      <label>password
+        <input type="text" name="password" disabled required>
+      </label>
+
+    </fieldset>
+
+
+
+
+
     </form>
 
   </body>
